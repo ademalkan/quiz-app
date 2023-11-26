@@ -32,13 +32,13 @@
 
 ![image](https://github.com/ademalkan/quiz-app/assets/43451577/44d0ec02-62c7-4dc3-883c-4c76cf5bcde6)
 
-![image](https://github.com/ademalkan/quiz-app/assets/43451577/ea1a42d8-f478-4f18-95eb-1f337da46161)
+![image](https://github.com/ademalkan/quiz-app/assets/43451577/5e5ea9d9-0f9b-4fce-a4d9-626d454996ea)
 
-![image](https://github.com/ademalkan/quiz-app/assets/43451577/d49bcfe2-9f9b-49aa-ab59-22dd7f5931b4)
+![image](https://github.com/ademalkan/quiz-app/assets/43451577/3764f5fd-1a63-4961-9a90-a3bfe0e0e17e)
 
-![image](https://github.com/ademalkan/quiz-app/assets/43451577/eb667476-ee05-47db-9efa-cee11a49ff48)
+![image](https://github.com/ademalkan/quiz-app/assets/43451577/782fc600-5742-4c03-9035-a527d62b336d)
 
-![image](https://github.com/ademalkan/quiz-app/assets/43451577/c4b24436-9012-40b6-9c63-971938a6d2ed)
+![image](https://github.com/ademalkan/quiz-app/assets/43451577/ca08b809-6815-4c3c-b179-d5952a3de5bb)
 
 
 ## Images From Cypress Unit Test
