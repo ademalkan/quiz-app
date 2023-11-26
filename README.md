@@ -40,3 +40,14 @@
 
 ![image](https://github.com/ademalkan/quiz-app/assets/43451577/c4b24436-9012-40b6-9c63-971938a6d2ed)
 
+
+## Images From Cypress Unit Test
+
+![image](https://github.com/ademalkan/quiz-app/assets/43451577/5b755f12-b02e-4be3-a4aa-9ac49d84e8d9)
+
+
+## Images From Cypress e2e Test
+
+![image](https://github.com/ademalkan/quiz-app/assets/43451577/5bd8402e-5725-421a-b60b-fcf5f086b4d1)
+
+![image](https://github.com/ademalkan/quiz-app/assets/43451577/e955195d-9ba3-4e92-99eb-4b450241d69b)
