@@ -27,7 +27,7 @@ const RadioOption: React.FC<RadioOptionProps> = ({
   };
 
   const isChecked = userAnswer === optionKey;
-  const isCorrect = correctAnswer === optionKey;
+  const isCorrect = correctAnswer === optionKey && userAnswer;
 
   const isShowAnswerVideo = showAnswers && isCorrect && !isChecked;
 
@@ -70,7 +70,7 @@ const RadioOption: React.FC<RadioOptionProps> = ({
             Cevapla
           </button>
         ) : null}
-        {isShowAnswerVideo ? (
+        {isShowAnswerVideo && userAnswer ? (
           <button className="z-10 text-white bg-[#1ABC9C] flex items-center justify-between p-1 gap-2 rounded-md">
             <PlayIcon /> Çözüm Videosu
           </button>

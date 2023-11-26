@@ -4,11 +4,15 @@ import { useQuestionStore } from "@/features/store/questionStore";
 import clsx from "clsx";
 
 const Optic = () => {
-  const { questions, length, showAnswers } = useQuestionStore();
+  const { questions, length, showAnswers, setActiveQuestion } =
+    useQuestionStore();
 
   const getQuestionOptic = () => {
     return questions.map((question, index) => (
       <div
+        onClick={() => {
+          setActiveQuestion(index + 1);
+        }}
         key={index}
         className="bg-[#03A9F1] bg-opacity-10 rounded-md p-2 flex items-center gap-2"
       >

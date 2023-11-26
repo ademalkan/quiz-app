@@ -10,6 +10,7 @@ type QuestionStore = {
   activeQuestion?: Question;
   nextQuestion: () => void;
   prevQuestion: () => void;
+  setActiveQuestion: (questionId: number) => void;
   setShowAnswers: (showAnswers: boolean) => void;
   setUserAnswer: (userAnswer: keyof QuestionOption) => void;
 };
@@ -29,6 +30,17 @@ export const useQuestionStore = create<QuestionStore>()(
       prevQuestion: () => {
         set((state: Partial<QuestionStore>) => {
           return navigation({ state, type: "PREV" });
+        });
+      },
+      setActiveQuestion: (questionId: number) => {
+        set((state) => {
+          const activeQuestion = state.questions.find(
+            (question) => question.id === questionId
+          );
+          return {
+            ...state,
+            activeQuestion,
+          };
         });
       },
       setShowAnswers: (showAnswers: boolean) => {
