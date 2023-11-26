@@ -4,7 +4,7 @@ import { useQuestionStore } from "@/features/store/questionStore";
 import clsx from "clsx";
 
 const Optic = () => {
-  const { questions, length, showAnswers, setActiveQuestion } =
+  const { questions, length, showAnswers, setActiveQuestion, activeQuestion } =
     useQuestionStore();
 
   const getQuestionOptic = () => {
@@ -14,7 +14,10 @@ const Optic = () => {
           setActiveQuestion(index + 1);
         }}
         key={index}
-        className="bg-[#03A9F1] bg-opacity-10 rounded-md p-2 flex items-center gap-2"
+        className={clsx(
+          "bg-[#03A9F1] bg-opacity-10 rounded-md p-2 flex items-center gap-2",
+          { "bg-opacity-30": activeQuestion?.id === question.id }
+        )}
       >
         <span className="font-semibold mr-2">{question.id}. Soru</span>
         {["A", "B", "C", "D", "E"].map((item, index) => (

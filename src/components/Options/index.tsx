@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { QuestionOption } from "@/@types/question";
 import { useQuestionStore } from "@/features/store/questionStore";
 import { PlayIcon } from "../icons";
+import useRadioOption from "./options.hook";
 
 interface RadioOptionProps {
   optionKey: string;
@@ -20,11 +21,7 @@ const RadioOption: React.FC<RadioOptionProps> = ({
   showAnswers,
   onChange,
 }) => {
-  const [isHovering, setIsHovering] = useState(false);
-
-  const handleHover = () => {
-    setIsHovering(!isHovering);
-  };
+  const { isHovering, handleMouseEnter, handleMouseLeave } = useRadioOption();
 
   const isChecked = userAnswer === optionKey;
   const isCorrect = correctAnswer === optionKey && userAnswer;
@@ -46,9 +43,9 @@ const RadioOption: React.FC<RadioOptionProps> = ({
 
   return (
     <div
-      className="w-full flex "
-      onMouseEnter={handleHover}
-      onMouseLeave={handleHover}
+      className="w-full flex"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <label
         className={`relative p-3 mb-2  flex  justify-between items-center  rounded-md min-w-full  ${getBackgroundColor()}`}
@@ -66,7 +63,10 @@ const RadioOption: React.FC<RadioOptionProps> = ({
           </span>
         </div>
         {!isShowAnswerVideo && !isChecked && isHovering ? (
-          <button className="z-10 text-white bg-[#1ABC9C] flex items-center justify-between px-3 py-1 gap-2 rounded-md">
+          <button
+            onClick={() => onChange(optionKey)}
+            className="text-white bg-[#1ABC9C] flex items-center justify-between px-3 py-1 gap-2 rounded-md"
+          >
             Cevapla
           </button>
         ) : null}
